@@ -7,4 +7,20 @@ Vagrant.configure("2") do |config|
       v.cpus = 1
     end
   end
+  config.vm.define "k8snode1" do |k8snode1|
+    k8snode1.vm.box = "ubuntu/focal64"
+    k8snode1.vm.hostname = "k8smaster"
+    k8snode1.vm.box_url = "ubuntu/focal64"
+    k8snode1.vm.provider "virtualbox" do |v|
+      v.cpus = 1
+    end
+  end
+  config.vm.define "k8snode2" do |k8snode2|
+    k8snode2.vm.box = "ubuntu/focal64"
+    k8snode2.vm.hostname = "k8smaster"
+    k8snode2.vm.box_url = "ubuntu/focal64"
+    k8snode2.vm.provider "virtualbox" do |v|
+      v.cpus = 1
+    end
+  end
 end
